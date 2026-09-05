@@ -4,9 +4,26 @@
   "threat_ref": "T2",
   "expectation": "deny",
   "deny_reason": "SPIFFE trust domain mismatch",
-  "input": {
-    "operation": "enroll",
-    "proof": { "method": "spiffe_svid", "spiffe_id": "spiffe://other.example.test/ns/payments/sa/agent" },
-    "registry_state": { "trust_domain": "prod.example.test", "selector": { "spiffe_path": "/ns/payments/sa/agent" } }
+  "scenario": {
+    "agent_class": "twin",
+    "binding_type": "human_master",
+    "authority_root_ref": "user:alice@example.test",
+    "steps": [
+      {
+        "op": "register_workload",
+        "workload": {
+          "platform": "spiffe",
+          "selector": { "spiffe_path": "/ns/payments/sa/agent" },
+          "trust_domain": "prod.example.test",
+          "allowed_proof_methods": ["private_key_jwt", "spiffe_svid"]
+        }
+      },
+      {
+        "op": "complete_enrollment",
+        "attestation": { "method": "spiffe_svid", "spiffe_id": "spiffe://other.example.test/ns/payments/sa/agent" },
+        "expect": "deny",
+        "deny_reason": "trust domain"
+      }
+    ]
   }
 }

@@ -1,0 +1,33 @@
+{
+  "id": "P-T2-2",
+  "description": "A matching Kubernetes projected token satisfies workload enrollment",
+  "threat_ref": "T2",
+  "expectation": "allow",
+  "scenario": {
+    "agent_class": "service",
+    "binding_type": "organization_root",
+    "authority_root_ref": "org:acme",
+    "steps": [
+      {
+        "op": "register_workload",
+        "workload": {
+          "platform": "kubernetes",
+          "selector": { "namespace": "payments", "serviceaccount": "agent", "kubernetes_issuer": "https://kubernetes.example.test" },
+          "trust_domain": "example.test",
+          "allowed_proof_methods": ["private_key_jwt", "k8s_projected_sa"]
+        }
+      },
+      {
+        "op": "complete_enrollment",
+        "attestation": {
+          "method": "k8s_projected_sa",
+          "kubernetes_issuer": "https://kubernetes.example.test",
+          "kubernetes_subject": "system:serviceaccount:payments:agent"
+        }
+      },
+      { "op": "activate" },
+      { "op": "issue_token", "audience": "aegivela", "present_key": "main" },
+      { "op": "introspect", "audience": "aegivela", "present_key": "main", "expect": "ok" }
+    ]
+  }
+}
