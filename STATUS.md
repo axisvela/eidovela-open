@@ -11,7 +11,7 @@ summarized below. Internal EE planning remains in the private EE repository.
 |---|---|---|
 | `eidovela` (core) | AGPL-3.0-or-later | shared with open (`2.2.2`) |
 | `eidovela-open` (this repo) | Apache-2.0 | shared with core (`2.2.2`) |
-| `eidovela-ee` (enterprise) | AxisRobo Enterprise License | independent (`0.6.0`) |
+| `eidovela-ee` (enterprise) | AxisVela Enterprise License | independent (`0.6.0`) |
 
 ## Core — `eidovela` (AGPL-3.0-or-later)
 
