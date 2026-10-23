@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://eidovela.axisrobo.io/conformance/fixture.schema.json",
+  "$id": "https://eidovela.axisvela.io/conformance/fixture.schema.json",
   "title": "EidovelaConformanceFixture",
   "description": "An executable conformance scenario for EIDOVELA. The runner drives a live eidovelad over HTTP, generates real PoP keys and (for spiffe/mtls) self-signed certificates or (for k8s) claim-correct tokens, executes the ordered steps in a fresh tenant, and asserts the scenario expectation.",
   "type": "object",
@@ -84,7 +84,7 @@
         "expired": { "type": "boolean", "description": "Sign the peer token with an already-elapsed exp (default false)" },
         "reason": { "type": "string", "description": "Operator reason recorded on a suspend/revoke lifecycle event" },
         "blueprint_version": { "type": "string", "description": "Version for blueprint_register" },
-        "blueprint_publisher": { "type": "string", "description": "Publisher for blueprint_register (default axisrobo)" },
+        "blueprint_publisher": { "type": "string", "description": "Publisher for blueprint_register (default axisvela)" },
         "blueprint_class": { "type": "string", "description": "Declared class for blueprint_register (twin|service|ephemeral)" },
         "expect_blueprint_status": { "type": "string", "description": "Status blueprint_list must observe for the managed blueprint version (draft|published|deprecated)" },
         "expect": { "type": "string", "enum": ["ok", "deny"] },

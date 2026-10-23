@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://eidovela.axisrobo.io/contracts/v1/federation-trust.json",
+  "$id": "https://eidovela.axisvela.io/contracts/v1/federation-trust.json",
   "title": "FederationTrust",
   "description": "Operator-configured peer trust anchor. The peer owns its agents; tenant is always the local request scope and must never be mapped from peer claims.",
   "type": "object",

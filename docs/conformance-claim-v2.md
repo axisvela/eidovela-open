@@ -110,7 +110,7 @@ anchor distribution and database migration procedure.
 ## Reproducible execution
 
 The public conformance suite runs in CI (`.github/workflows/ci.yml`): it checks
-out this repository, builds the core daemon from `axisrobo/eidovela`, starts the
+out this repository, builds the core daemon from `axisvela/eidovela`, starts the
 in-process NOMIVELA test double, and runs the fixtures with `-count=1`. The
 fixtures, the daemon and the fake registry double are all committed, so the
 result is reproducible.

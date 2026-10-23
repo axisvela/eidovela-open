@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://eidovela.axisrobo.io/contracts/v1/workload-registration.json",
+  "$id": "https://eidovela.axisvela.io/contracts/v1/workload-registration.json",
   "title": "WorkloadRegistration",
   "type": "object",
   "required": [

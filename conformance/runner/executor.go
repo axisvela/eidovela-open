@@ -233,7 +233,7 @@ func (s *scenarioState) blueprintRegister(step Step) error {
 	}
 	publisher := step.BlueprintPublisher
 	if publisher == "" {
-		publisher = "axisrobo"
+		publisher = "axisvela"
 	}
 	var saved struct {
 		BlueprintID string `json:"blueprint_id"`

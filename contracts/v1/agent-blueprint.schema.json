@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://eidovela.axisrobo.io/contracts/v1/agent-blueprint.json",
+  "$id": "https://eidovela.axisvela.io/contracts/v1/agent-blueprint.json",
   "title": "AgentBlueprint",
   "type": "object",
   "required": [

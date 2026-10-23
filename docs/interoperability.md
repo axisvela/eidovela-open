@@ -41,7 +41,7 @@ go run ./cmd/eidovela-conformance -run F1-
 ```
 
 CI runs the same suite on `main` and on pull requests by building the core
-daemon from `axisrobo/eidovela` (see `.github/workflows/ci.yml`).
+daemon from `axisvela/eidovela` (see `.github/workflows/ci.yml`).
 
 ### Against a real Registry
 

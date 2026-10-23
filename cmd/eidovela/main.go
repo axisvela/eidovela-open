@@ -205,7 +205,7 @@ func blueprintOp(ctx context.Context, client *eidovela.Client, args []string) (a
 		fs := flag.NewFlagSet("blueprint register", flag.ExitOnError)
 		class := fs.String("class", "", "declared class: twin | service | ephemeral")
 		version := fs.String("version", "", "blueprint version")
-		publisher := fs.String("publisher", "axisrobo", "blueprint publisher")
+		publisher := fs.String("publisher", "axisvela", "blueprint publisher")
 		if err := fs.Parse(args[1:]); err != nil {
 			return nil, err
 		}
